@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+    }
+
+    
+.header{
+
+display: flex;
+}
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #323131;
+  filter: opacity(95%);
+  border-bottom: 1px solid #d57b05;
+  margin: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+ .logo {
+  padding-left: 18px;
+  font-weight: bold;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  margin-left: 20px;
+}
+.orange{
+  color: #d57b05;
+}
+.logo i{
+  
+  color:#d57b05;
+  font-size: 22px;
+}
+.navbar ul {
+
+  list-style: none;
+  display: flex;
+ font-size: 15px;
+  margin: 0;
+  padding:0;
+}
+.navbar a {
+  font-size: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fdfbfb;
+  transition: all 1s ease;
+}
+.navbar  a:hover{
+    scale: 1.2;
+   color:#4578a0;
+}
+.navbar i:hover{
+  scale:1.2;
+  color:#d57b05;
+}
+
+
+
+.button-logout{
+background-color: #d57b05;
+ border-radius: 6px;  
+ height: 6vh;
+ width: 12vh;
+margin-right: 30px;
+}  
+
+
+
+.button-logout button {
+  color: #fdfbfb;
+ background: none;
+ border: none;
+ font-size: 17px;
+ padding:7px 8px ;
+
+}
+ .button-logout:hover {
+  background-color: #4578a0;     /* Darker on hover */
+}
+
+
+    /* Top Section */
+    .top-section {
+  
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background: #fff;
+    }
+
+    .text-content {
+      max-width: 50%;
+    }
+
+    .text-content h1 {
+      font-size: 80px;
+      margin-bottom: 5px;
+      color: #222;
+
+      animation: slideInLeft 0.5s ease-in-out forwards;
+    }
+
+    @keyframes slideInLeft {
+      from{
+        opacity: 0;
+        transform: translateX(50%);
+      }
+      to{
+        opacity: 1;
+      }
+    }
+.Orange{
+    color:#d57b05;
+}
+    .text-content p {
+ animation: slideInLeft 0.4s ease-in-out 0.8s forwards;
+      font-size: 18px;
+      color: #555;
+      line-height: 1.5;
+    }
+.top-section-image{
+  display: flex;
+  padding-right: 0px;
+}
+    .top-section img {
+padding-right: 0%;
+  float: right;
+   
+      width: 400px;
+      height: 350px;
+     margin: auto;
+     padding: auto;
+
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 50px;
+        
+       
+    }
+
+    .service-box {
+      border-color: #d57b05;
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s;
+       box-shadow: 0.5px 0.5px 8px #c2c2c2 ;
+       
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      color: #d57b05;
+      box-shadow: 0.5px 0.5px 8px #d57b05 ;
+    }
+
+    .service-box i {
+     font-size: 30px;
+      margin-bottom: 15px;
+      color: #d57b05;
+    }
+
+    .service-box h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .service-box a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 22px;
+      color: #d57b05;
+      text-decoration: none;
+      transition: 0.3s;
+    
+      
+    }
+
+    .service-box i:hover,a:hover {
+      color: #0056b3;
+      scale:1.1;
+    }
+    .footer {
+  background-color: #222;
+  color: #fff;
+  padding: 5px ;
+  font-size: 14px;
+  flex:wrap;
+}
+.footer-logo{
+  padding-top: 10px;
+  padding-left: 40px;
+  font-size: 24px;
+}
+.footer-logo i{
+    padding-top:5px;
+  font-size: 22px;
+
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;  /* dono ko dur dur rakhne ke liye */
+  align-items: flex-start;         /* top se align karne ke liye */
+  gap: 5px;                       /* dono ke beech space */
+}
+.footer h4{
+  padding-left: 5px;
+ font-size: 24px;
+}
+  .footer-contact {
+      padding-left: 20px;
+flex:1
+  }
+.footer-contact p{
+    padding-top: 2px;
+}
+.services{
+  flex:1;
+}
+
+
+.Blogs{
+  flex:1;
+ 
+}
+.services h4 , .Blogs h4{
+display: flex;
+  padding-left: 170px;
+ 
+}
+
+.services ul , .Blogs ul{
+  list-style:none;
+  cursor:pointer;
+  
+}
+.services ul:hover , .Blogs ul:hover{
+  color:#4578a0;
+}
+
+.footer-social{
+  margin-right: 20px;
+  margin-bottom: 10px;
+    
+}
+.footer-social a {
+   
+  justify-content: end;
+  color: #ccc;
+padding-left: 20px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+.footer-social a:hover {
+  color: #d57b05;
+   
+   transform: scale(6px);
+}
+.footer-bottom {
+  
+  text-align: center;
+  padding: 1px 0;
+  border-top: 1px solid #444;
+  margin-top: 2px;
+  color: #aaa;
+}
+.footer  a {
+  
+  text-align: center;
+  color: #ccc;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+.footer a:hover{
+   color:#4578a0;
+}
+
+   
+
+
+  </style>
+</head>
+<body>
+   <header class="navbar">
+    <div class="logo"><i class = "fa-solid fa-earth"></i>&nbsp;Global <span class="orange"> South</span> </div>
+    <nav>
+      <ul>
+         <li><a href="pro 1 home.html">Home   <i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="blogspro.html">Blogs <i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="servicespro.html">Services <i class="fa-solid fa-angle-down"></a></i></li>
+        <li><a href="teampro1.html">Team <i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="contactpro.html">Contact <i class="fa-solid fa-angle-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="button-logout">
+     
+      <button onclick="logout()" >Logout</button>
+    </div>
+    
+  </header>
+
+
+
+  <!-- Top Section -->
+  <section class="top-section">
+    <div class="text-content">
+      <h1>Our <span class="Orange">Services</span></h1>
+      <hr width="300px" color="#d57b05">
+      <p>
+        We provide creative and innovative solutions <br>
+        that help your business grow digitally.
+      </p>
+    </div>
+    <div class="top-section-image">
+      <img src="c:\Users\DIGITAL\Desktop\AWE\enable project1\backgroundservices-01-01.png" alt="Service Image">
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+  
+    <div class="service-box">
+      <i class="fa-solid fa-pen-nib"></i>
+      <h3>Graphic Designer</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+      <i class="fa-solid fa-video"></i>
+      <h3>Video Editing</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+      <i class="fa-brands fa-wordpress"></i>
+      <h3>Wordpress</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+     <i class="fa-solid fa-code"></i>
+      <h3>Custom Website</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+      <i class="fa-brands fa-figma"></i>
+      <h3>UI/UX</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+    <i class="fa-solid fa-ranking-star"></i>
+      <h3>SEO Expert</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+    <i class="fa-solid fa-hashtag"></i>
+      <h3>Social Media Manager</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+      <i class="fa-solid fa-list-check"></i>
+      <h3>Project Manager</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="service-box">
+      <i class="fa-solid fa-pen"></i>
+      <h3>Content Writing</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i></a>
+    </div>
+  
+  </section>
+  <footer class="footer">
+    
+
+     <footer class="footer">
+        <div class="footer-logo"> <i class = "fa-solid fa-earth"></i><b><span class="orange"> Global</span> South</b></div>
+    <section class ="footer-container">
+    <div class="footer-contact">
+    <h4>Contact</h4>
+      <p ><b>Email:</b> info@globalchange.org</p>
+      <p ><b>Phone:</b> +123 456 7890</p>
+      <p ><b>Address:</b> 123 Policy Street, South City</p></span>
+    
+    </div>
+    
+  <div class="services">
+       <h4>Services</h4>
+       <ul>
+       <a href="#"><li>Graphic Design</li></a> 
+        <a href="#"><li>Web Development</li></a>
+        <a href="#"><li>video Editing</li></a>
+        <a href="#"><li>SEO Expert</li></a>
+        <a href="#"><li>Wordpress</li></a>
+        <a href="#"><li>Content Writing </li></a>
+      </ul>
+     </div> 
+
+     <div class="Blogs">
+      <h4>Blogs</h4>
+      <ul>
+        <a href="#"><li>Empowering Youth</li></a>
+        <a href="#"><li>Climate Resiliences</li></a>
+        <a href="#"><li>Policy Access</li></a>
+     
+      </ul>
+     </div>
+
+     </section>
+
+     <div class="footer-social">
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-linkedin"></i></a>
+  <span> <a href="#"><i class="fa-brands fa-behance"></i></a>
+    
+    <a href="#"><i class="fa-brands fa-upwork"></i></a>
+
+</div>
+ <div class="footer-bottom">
+    <p>&copy; 2025 Global Change. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
+  </div>
+ 
+</footer>
+
+</body>
+</html>
+
